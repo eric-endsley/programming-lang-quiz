@@ -24,6 +24,20 @@ $(document).ready(function () {
     const countD = (countAnswers (answers, "d"))
 
     console.log (countA, countB, countC, countD)
+
+    if (countA >= countB && countA >= countC && countA >= countD) {
+      $(".javascript").show();
+      $(".cSharp, .ruby, .nope").hide();
+    } else if (countB >= countA && countB >= countC && countB >= countD) {
+    $(".cSharp").show();
+    $(".javascript, .ruby, .nope").hide();
+    } else if (countC >= countA && countC >= countB && countC >= countD) {
+    $(".ruby").show();
+    $(".javascript, .cSharp, .nope").hide();
+    } else if (countD >= countA && countD >= countB && countD >= countC) {
+      $(".nope").show();
+      $(".javascript, .cSharp, .ruby").hide();
+    }
   });
 });
 
