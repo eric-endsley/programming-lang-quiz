@@ -27,16 +27,16 @@ $(document).ready(function () {
       $(".error").show();
       $(".javascript, .cSharp, .ruby, .nope").hide();
     } else if (countA >= countB && countA >= countC && countA >= countD) {
-      $(".javascript").show();
+      $(".javascript").fadeIn();
       $(".error, .cSharp, .ruby, .nope").hide();
     } else if (countB >= countA && countB >= countC && countB >= countD) {
-      $(".cSharp").show();
+      $(".cSharp").fadeIn();
       $(".error, .javascript, .ruby, .nope").hide();
     } else if (countC >= countA && countC >= countB && countC >= countD) {
-      $(".ruby").show();
+      $(".ruby").fadeIn();
       $(".error, .javascript, .cSharp, .nope").hide();
     } else if (countD >= countA && countD >= countB && countD >= countC) {
-      $(".nope").show();
+      $(".nope").fadeIn();
       $(".error, .javascript, .cSharp, .ruby").hide();
     }
 
