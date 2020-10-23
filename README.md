@@ -11,7 +11,7 @@ This webpage contains a quiz with 5 questions, each of which provides 4 radio in
 ## Setup
 
 #### Open Online
-Visit the [programming language quiz webpage]() at __
+Visit the [programming language quiz webpage](https://eric-endsley.github.io/week-2-project/) at https://eric-endsley.github.io/week-2-project/.
 
 #### Clone and Open Locally
  1. Open the [programming language quiz github page](https://github.com/eric-endsley/week-2-project.git) by clicking the link or copy/pasting https://github.com/eric-endsley/week-2-project.git in the navigator bar of a web browser application.
