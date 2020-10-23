@@ -1,8 +1,13 @@
+.container {
+  background-color:rgba(35, 139, 34, 0.4);
+  border: 2px solid black
+}
+
 .jumbotron {
   text-align: center;
   background-color: rgba(114, 145, 219, 0.6);
+  border: 10px solid black
 }
-
 
 form p {  
   font-weight: bold;
@@ -24,9 +29,9 @@ img {
   display: none;
   margin: 20px;
   border: 2px solid black;
-  padding: 4px;
+  padding: 20px;
   text-align: center;
-  background-color: rgba(114, 145, 219, 0.4)
+  background-color: rgba(114, 145, 219, 0.5)
 }
 
 .result p {
