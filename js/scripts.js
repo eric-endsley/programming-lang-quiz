@@ -1,6 +1,8 @@
 $(document).ready(function () {
   $("form#code").submit(function(event) {
     event.preventDefault();
+    $(".result").show();
+
     const cells = $("input:radio[name=cells]:checked").val();
     const fun = $("input:radio[name=fun]:checked").val();
     const fear = $("input:radio[name=fear]:checked").val();
@@ -18,6 +20,7 @@ $(document).ready(function () {
       }
       return count;
     }
+
     const countA = (countAnswers (answers, "a"))
     const countB = (countAnswers (answers, "b"))
     const countC = (countAnswers (answers, "c"))
@@ -29,15 +32,18 @@ $(document).ready(function () {
       $(".javascript").show();
       $(".cSharp, .ruby, .nope").hide();
     } else if (countB >= countA && countB >= countC && countB >= countD) {
-    $(".cSharp").show();
-    $(".javascript, .ruby, .nope").hide();
+      $(".cSharp").show();
+      $(".javascript, .ruby, .nope").hide();
     } else if (countC >= countA && countC >= countB && countC >= countD) {
-    $(".ruby").show();
-    $(".javascript, .cSharp, .nope").hide();
+      $(".ruby").show();
+      $(".javascript, .cSharp, .nope").hide();
     } else if (countD >= countA && countD >= countB && countD >= countC) {
       $(".nope").show();
       $(".javascript, .cSharp, .ruby").hide();
     }
+    $("html, body").animate( {
+      scrollTop: $(".result").offset().top
+    }, 800);
   });
 });
 
