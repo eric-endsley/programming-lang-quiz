@@ -23,18 +23,21 @@ $(document).ready(function () {
     const countC = (countAnswers (answers, "c"))
     const countD = (countAnswers (answers, "d"))
 
-    if (countA >= countB && countA >= countC && countA >= countD) {
+    if (countA + countB + countC + countD !== 5) {
+      $(".error").show();
+      $(".javascript, .cSharp, .ruby, .nope").hide();
+    } else if (countA >= countB && countA >= countC && countA >= countD) {
       $(".javascript").show();
-      $(".cSharp, .ruby, .nope").hide();
+      $(".error, .cSharp, .ruby, .nope").hide();
     } else if (countB >= countA && countB >= countC && countB >= countD) {
       $(".cSharp").show();
-      $(".javascript, .ruby, .nope").hide();
+      $(".error, .javascript, .ruby, .nope").hide();
     } else if (countC >= countA && countC >= countB && countC >= countD) {
       $(".ruby").show();
-      $(".javascript, .cSharp, .nope").hide();
+      $(".error, .javascript, .cSharp, .nope").hide();
     } else if (countD >= countA && countD >= countB && countD >= countC) {
       $(".nope").show();
-      $(".javascript, .cSharp, .ruby").hide();
+      $(".error, .javascript, .cSharp, .ruby").hide();
     }
 
     $(".result").show();

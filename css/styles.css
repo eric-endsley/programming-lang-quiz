@@ -49,4 +49,6 @@ img {
   font-weight: normal;
 }
 
-
+.error {
+  color: red;
+}
