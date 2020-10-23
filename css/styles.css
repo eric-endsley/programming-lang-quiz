@@ -6,7 +6,7 @@
 .Csharp,
 .ruby,
 .nope {
-  /*display: none;*/
+  display: none;
 }
 
 img {
