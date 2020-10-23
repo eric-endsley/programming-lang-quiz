@@ -4,7 +4,7 @@
 }
 
 
-#code p {
+form p {  
   font-weight: bold;
 }
 
@@ -20,7 +20,7 @@ img {
   margin-bottom: 20px;
 }
 
-.result{
+.result {
   display: none;
   margin: 20px;
   border: 2px solid black;
@@ -28,6 +28,11 @@ img {
   text-align: center;
   background-color: rgba(114, 145, 219, 0.4)
 }
+
+.result p {
+  font-weight: normal;
+}
+
 
 .btn {
   margin-top: 20px;

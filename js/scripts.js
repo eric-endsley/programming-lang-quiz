@@ -1,14 +1,11 @@
 $(document).ready(function () {
   $("form#code").submit(function(event) {
     event.preventDefault();
-    $(".result").show();
-
     const cells = $("input:radio[name=cells]:checked").val();
     const fun = $("input:radio[name=fun]:checked").val();
     const fear = $("input:radio[name=fear]:checked").val();
     const visible = $("input:radio[name=visible]:checked").val();
     const aspire = $("input:radio[name=aspire]:checked").val();
-
     const answers = [cells, fun, fear, visible, aspire]
 
     function countAnswers (answers, input) {
@@ -26,8 +23,6 @@ $(document).ready(function () {
     const countC = (countAnswers (answers, "c"))
     const countD = (countAnswers (answers, "d"))
 
-    console.log (countA, countB, countC, countD)
-
     if (countA >= countB && countA >= countC && countA >= countD) {
       $(".javascript").show();
       $(".cSharp, .ruby, .nope").hide();
@@ -41,6 +36,9 @@ $(document).ready(function () {
       $(".nope").show();
       $(".javascript, .cSharp, .ruby").hide();
     }
+
+    $(".result").show();
+
     $("html, body").animate( {
       scrollTop: $(".result").offset().top
     }, 800);
