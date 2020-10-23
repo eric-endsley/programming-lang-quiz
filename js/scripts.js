@@ -9,7 +9,21 @@ $(document).ready(function () {
 
     const answers = [cells, fun, fear, visible, aspire]
 
-    console.log(answers)
+    function countAnswers (answers, input) {
+      let count = 0;
+      for (let i = 0; i < answers.length; i++) {
+        if (answers[i] === input) {
+          count++;
+        }
+      }
+      return count;
+    }
+    const countA = (countAnswers (answers, "a"))
+    const countB = (countAnswers (answers, "b"))
+    const countC = (countAnswers (answers, "c"))
+    const countD = (countAnswers (answers, "d"))
 
+    console.log (countA, countB, countC, countD)
   });
 });
+
